@@ -4,7 +4,7 @@ from redis_provider import RedisProvider
 
 @pytest.fixture
 def redis_provider():
-    return RedisProvider("localhost", 6379)
+    return RedisProvider("redis", 6379)
 
 
 def test_provider(redis_provider):
