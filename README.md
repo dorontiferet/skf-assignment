@@ -1,5 +1,5 @@
 # skf-assignment
-A simple web service for storing and retrieving text messages using Redis as a database.
+A simple web service for storing and retrieving text messages, which uses Redis as a DB.
 
 ## Running:
 To run the application and the DB in docker:
@@ -20,13 +20,13 @@ pytest
 curl -H "Content-Type: application/json" -X POST -d "{\"content\":\"this is the content of the message\"}" http://localhost:5000/messages/publish
 ```
 
-### Retrieve last message:
+### Retrieve the last message:
 `GET /messages/getLast`
 ```
 curl http://localhost:5000/messages/getLast
 ```
 
-### Retrieve all messages between timeframes:
+### Retrieve all messages between timestamps:
 `GET /messages/getByTime?start=START&end=END`
 
 *start, end - optional timestamps
